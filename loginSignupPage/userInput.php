@@ -1,6 +1,6 @@
 <?php
-$username = $_POST['user'];
-$password = $_POST['pass'];
+$username = $_POST['loginuser'];
+$password = $_POST['loginpass'];
 $conn = oci_connect( 'student', 'STUDENT', "localhost/xe");
   $query = 'select username from app_users where username= \''.$username.'\'';
   $id = oci_parse($conn, $query);
@@ -11,7 +11,7 @@ while ($row = oci_fetch_array($id, OCI_RETURN_NULLS+OCI_ASSOC)) {
      foreach ($row as $item) {
  
         $u_name = $item;
- 
+
      }
     
   }
@@ -32,10 +32,11 @@ $connection_string = 'localhost/xe';
   if($username == $u_name and $password == $u_password and !($username == '') and !($password == '')){
     $conn = oci_connect( 'student', 'STUDENT', $connection_string);
     #echo 'Connection succesfull';
-    header ('Location : ../homepageAfterLogin/index.html');
+    header('Location: ../homepageAfterLogin/index.html');
  
 }else{
     header('Location: loginSignup.html');
  }   
  
 ?>
+
