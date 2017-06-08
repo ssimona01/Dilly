@@ -32,18 +32,14 @@
 				<label for="tab-2" class="tab">Sign Up</label>
 		<div class="login-form">
 			<div class="sign-in-htm">
-			<form action="../homepageAfterLogin/index.html" method="post">
+			<form action="userInput.php" method="post">
 				<div class="group">
 					<label for="user" class="label" placeholder="Your e-mail/username..">E-mail/Username:</label>
-					<input id="user" required="required" type="text" class="input">
+					<input id="user" name="loginuser" required="required" type="text" class="input">
 				</div>
 				<div class="group">
-					<label for="pass" class="label" placeholder= "Ypur password..">Password:</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span class="icon"></span> Keep me Signed in</label>
+					<label for="pass" class="label" placeholder= "Your password..">Password:</label>
+					<input id="pass" type="password" name="loginpass" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<input type="submit" class="button" value="Sign In" >
@@ -57,35 +53,37 @@
 			</div>
 			
 			<div class="sign-up-htm">
-			<form action="#" method="post">
+			<form action="signupdata.php" method="post">
 				<div class="group">
 					<label for="fname" class="label">Firstname:</label>
-					<input id="fname" type="text" required="required" class="input">
+					<input id="fname" type="text" name="newfirstname" required="required" class="input">
 				</div>
 				<div class="group">
 					<label for="lname" class="label">Lastname:</label>
-					<input id="lname" type="text" required="required" class="input">
+					<input id="lname" type="text" name="newlastname" required="required" class="input">
 				</div>
 				<div class="group">
 					<label for="userr" class="label">Username:</label>
-					<input id="userr" type="text" required="required" class="input">
+					<input id="userr" type="text" name="newusername" required="required" class="input">
 				</div>
 				<div class="group">
 					<label for="passr" class="label">Password:</label>
-					<input id="passr" type="password" required="required" class="input" data-type="password">
+					<input id="passr" type="password" name="newpassword" required="required" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="passrc" class="label">Repeat Password:</label>
-					<input id="passrc" type="password" required="required" class="input" data-type="password">
+					<input id="passrc" type="password" name="checkpassword" required="required" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<label for="emailr" class="label">Email Address:</label>
-					<input id="emailr" type="text" required="required" class="input">
+					<input id="emailr" type="text" name ="newemail" required="required" class="input">
 				</div>
 				<div class="group">
 					<label for="birthdate" class="label">Birthdate:</label>
-					<input id="birthdate" type="date" required="required" class="input">
+					<input id="birthdate" type="date" name="newbdate" required="required" class="input">
 				</div>
+				<div class="group">
+			
 				<div class="group">
 					<label for="gender" class="label">Genre:</label>
 					<input id="gender" type="radio" value="male" class="input" name="sex">Male
@@ -110,3 +108,4 @@
 </div>
 </body>
 </html>
+
