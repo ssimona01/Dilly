@@ -47,7 +47,7 @@ else
 	$id = oci_parse($conn, $sql_insert);
 	$result = oci_execute($id);
 
-	$sql_insert2 = 'insert into user_credentials (user_id, email, firstname, lastname, birth, city, country) values ( ' . $maxid . ', \'' . $username . '@yahoo.com\', \''. $firstname . '\', \'' . $lastname .  '\', to_date(\'' . $birthday . '\' ,\'DD-MON-RR\' ) , \' ' . $city . '\', \'' . $country . '\')';
+	$sql_insert2 = 'insert into user_credentials (user_id, email, firstname, lastname, birth, city, country) values ( ' . $maxid . ',  \'' . $email .  '\', \''. $firstname . '\', \'' . $lastname .  '\', to_date(\'' . $birthday . '\' ,\'DD-MON-RR\' ) , \' ' . $city . '\', \'' . $country . '\')';
 	$id = oci_parse($conn, $sql_insert2);
 	$result = oci_execute($id);
 
