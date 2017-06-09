@@ -1,6 +1,10 @@
 <?php
+session_start();
+?>
+<?php
 $username = $_POST['loginuser'];
 $password = $_POST['loginpass'];
+$_SESSION["usr"] = $username;
 $conn = oci_connect( 'student', 'STUDENT', "localhost/xe");
   $query = 'select username from app_users where username= \''.$username.'\'';
   $id = oci_parse($conn, $query);
