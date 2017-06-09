@@ -33,17 +33,18 @@
     </script>
 </head>
 
-<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="">
+<body onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload="" >
   <header id="Head"><a href="../homePage/home.html">Dilly</a></header>
   <div class="forgot-wrap">
 		<div class="forgot-form">
 			<br>
 			<br>
-			<font size="6"> You've ben logged in.</font>
+			<font size="6"> You've been logged out.</font>
 			<br>
 			<br>
 			<br>
 			<br>
+
 			<form action="../homePage/home.html	" method="post">
 					<div class="group">
 					<input type="submit" class="button" value="Home" >

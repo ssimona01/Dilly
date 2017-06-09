@@ -77,7 +77,7 @@
 				</div>
 				<div class="group">
 					<label for="emailr" class="label">Email Address:</label>
-					<input id="emailr" type="email" name ="newemail" required="required" class="input">
+					<input id="emailr" type="text" name ="newemail" required="required" class="input">
 				</div>
 				<div class="group">
 					<label for="birthdate" class="label">Birthdate:</label>
