@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +7,16 @@
 		<link href="../bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 		<link href="homeCss.css" rel="stylesheet">
   </head>
-  <body>
+  <body  onload="document.refresh();">
+  <input type="hidden" id="refreshed" value="no">
+<script type="text/javascript">
+onload=function(){
+var e=document.getElementById("refreshed");
+if(e.value=="no")e.value="yes";
+else{e.value="no";location.reload();}
+}
+</script>
+  
   		<div id="container">
 			 <header id="Head">Dilly</header>
 			 <nav>
@@ -41,6 +52,10 @@
 			 <table border="1px" style="float:right;background-color:white;">
 			 <thead >
 			 		<th><a class="btn icon-btn " href="../loginSignupPage/loginSignup.html" ><span class="glyphicon btn-glyphicon glyphicon-expand " style="color:green "></span> Log in | Sign Up</a></th>
+			 		<audio autoplay> 
+  				<source src="logout.mp3">
+  				<source src="logout.ogg">
+				</audio>
 			 </thead>
 			 </table>
 			 </div>
@@ -51,3 +66,4 @@
 		
   </body>
 </html>
+
